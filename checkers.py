@@ -25,7 +25,7 @@ class Board:
     def __init__(self):
         """Constructs a new, normal set up board."""
         self.data = []
-        self.data.extend(Board.start_rows(Checker.PLAYER_ONE))
+        self.data.extend(Board.start_rowis(Checker.PLAYER_ONE))
         self.data.extend(Board.empty_rows(2))
         self.data.extend(Board.start_rows(Checker.PLAYER_TWO))
 
@@ -133,7 +133,7 @@ def ask_for_move(player):
     """The function that requests that the player enter a move."""
     move = []
     while not valid_move(move):
-        move = input('Player %s, enter move (ex. A0 B1 to move piece at A0 to B1): ' % player).split(' ')
+        move = input('%s, enter move (ex. A0 B1 to move piece at A0 to B1): ' % player).split(' ')
     return move
 
 def input_and_move(player, board):
@@ -181,6 +181,8 @@ if __name__ == '__main__':
     if players == '1':
         print('AI not implemented yet. So... I\'ll just... do nothing')
     else:
+        firstPersonName = input('What is your name, dude? (First person.) Like tell me, like right now: ');
+        secondPersonName = input('You\'re up, homeslice: ');
         board = Board()
         while True:
             print(board.render())
