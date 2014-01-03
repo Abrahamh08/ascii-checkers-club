@@ -25,7 +25,7 @@ class Board:
     def __init__(self):
         """Constructs a new, normal set up board."""
         self.data = []
-        self.data.extend(Board.start_rowis(Checker.PLAYER_ONE))
+        self.data.extend(Board.start_rows(Checker.PLAYER_ONE))
         self.data.extend(Board.empty_rows(2))
         self.data.extend(Board.start_rows(Checker.PLAYER_TWO))
 
